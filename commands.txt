@@ -1,5 +1,4 @@
 1. Create Nx Environment and select Angular, WebPack, SASS, Jest, and Playwright in the setup prompts
-
 npx create-nx-workspace@latest chat-application --ci=github
 
 
