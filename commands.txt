@@ -1,9 +1,12 @@
 1. Create Nx Environment and select Angular, WebPack, SASS, Jest, and Playwright in the setup prompts
 npx create-nx-workspace@latest chat-application --ci=github
 
-
 2. Install Nx plugin for Node.js
 npx nx add @nx/node
 
 3. Create a Node.js application named "api" and select eslint, jest, and express in the setup prompts
 npx nx g @nx/node:application apps/api
+
+4. Create a TypeScript library named "shared-models" for shared resources, and select eslint and Jest in the setup prompts
+npx nx g @nx/js:lib libs/shared-models
+
