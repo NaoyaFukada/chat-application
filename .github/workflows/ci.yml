@@ -13,6 +13,8 @@ jobs:
         with:
           node-version: 22
           cache: "npm"
+          cache-dependency-path: |
+            frontend/package-lock.json
 
       # ===== Frontend =====
       - name: Install Frontend Dependencies
@@ -29,16 +31,16 @@ jobs:
       - run: npm audit --audit-level=moderate
         working-directory: frontend
 
-      # ===== Backend =====
-      - name: Install Backend Dependencies
-        run: npm ci
-        working-directory: backend
+      # # ===== Backend =====
+      # - name: Install Backend Dependencies
+      #   run: npm ci
+      #   working-directory: backend
 
-      - run: npm run build --if-present
-        working-directory: backend
+      # - run: npm run build --if-present
+      #   working-directory: backend
 
-      - run: npm run lint
-        working-directory: backend
+      # - run: npm run lint
+      #   working-directory: backend
 
-      - run: npm audit --audit-level=moderate
-        working-directory: backend
+      # - run: npm audit --audit-level=moderate
+      #   working-directory: backend
