@@ -9,3 +9,7 @@ rm -rf .git
 # To install tailwind in angular
 
 npm install tailwindcss @tailwindcss/postcss postcss --force
+
+# To install eslint
+
+npm install --save-dev eslint
